@@ -1,0 +1,9 @@
+version: '3'
+services: 
+    ros:
+        image: yuta0709/docker-ros:noetic
+        ports: 
+            - "6080:80"
+            - "2222:22"
+        volumes:
+            - "./catkin_ws:/root/catkin_ws"
