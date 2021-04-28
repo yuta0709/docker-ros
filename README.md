@@ -8,8 +8,13 @@ cd docker-ros/noetic
 docker build -t [UserName]/[ImageName]:[Tag] .
 ```
 ## Usage
-### 
-### Creating `Dockerfile`
+```console
+cd noetic
+docker-compose up
+```
+Open [localhost:6080](http://localhost:6080) in Browser
+
+## Creating `Dockerfile`
 ```docker
 FROM yuta0709/docker-ros:noetic
 
@@ -21,7 +26,7 @@ COPY ./config_files/id_rsa.pub /root/.ssh/authorized_keys
 ```console
 docker build -t [UserName]/[ImageName]:[Tag] .
 ```
-### Creating `docker-compose.yml`
+## Creating `docker-compose.yml`
 ```yaml
 version: '3'
 services: 
@@ -33,7 +38,7 @@ services:
         volumes:
             - "./catkin_ws:/root/catkin_ws"
 ```
-#### Start container
+### Start container
 ```console
 docker-compose up
 ```
